@@ -1,2 +1,7 @@
-# live_streamer
- real-time video streaming application uses Gstreamer , openCV and Yolo for person detection
+
+#Gstreamer Live_Streaming 
+The goal of this project was to develop a real-time video streaming application that uses GStreamer for video capture and streaming, with external control via a REST API. This implementation provides a robust solution for capturing and streaming video in real-time, with an optional fallback to alternative encoders. The project simulates a real-world media streaming service, featuring real-time video capture and streaming through GStreamer pipelines for efficient handling of video capture and network streaming. It also includes a REST API for external control, enabling remote operations for starting, stopping, and monitoring the streaming service. Additionally, a client application displays the video stream using OpenCV and provides a GUI-based interface for playback control. 
+
+The GStreamer pipeline handles video encoding and streaming, with two configurations: x264enc as the preferred encoder for H.264 compression with zero-latency tuning, and vp8enc as a fallback if x264enc is unavailable. The pipeline captures video from a webcam and streams the compressed video using the UDP protocol to localhost. The REST API, built with FastAPI, exposes two endpoints—`/start` to initiate the video stream and `/stop` to terminate the stream. The client application, using OpenCV and a Tkinter-based GUI, connects to the video source to display the stream and provides playback controls such as "Play" and "Stop."
+
+
